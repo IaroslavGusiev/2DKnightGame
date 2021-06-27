@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Creature : MonoBehaviour, IDestructable
+public abstract  class Creature : MonoBehaviour, IDestructable
 {
     protected Animator _animator;
     protected Rigidbody2D _rb;
     [SerializeField] protected float _speed;
     [SerializeField] protected float _damage;
     [SerializeField] protected float _health = 100;
+
     public float Health
     { 
         get { return _health; } 
