@@ -888,7 +888,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4f215bc3727d14e82b53de9ed804ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _content: 0
+  itemData:
+    _crystallType: 0
+    _quantity: 0
 --- !u!61 &157638336
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1434,7 +1436,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4f215bc3727d14e82b53de9ed804ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _content: 0
+  itemData:
+    _crystallType: 0
+    _quantity: 0
 --- !u!61 &352693844
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4000,7 +4004,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4f215bc3727d14e82b53de9ed804ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _content: 0
+  itemData:
+    _crystallType: 0
+    _quantity: 0
 --- !u!61 &834575755
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5815,10 +5821,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56f67778b1d35244c8deebaeeae61cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _score: 0
   _dragonHitScore: 10
   _dragonKillScore: 50
-  _maxHealth: 100
+  _dragonKillExperience: 50
+  _inventory: []
+  _audioManager:
+    _sounds: []
+    _defaultClip: {fileID: 0}
+    _menuMusic: {fileID: 0}
+    _gameMusic: {fileID: 0}
+  _hero:
+    _maxHealth: 100
+    _damage: 20
+    _speed: 3
+    _experience: 0
 --- !u!4 &1243360572
 Transform:
   m_ObjectHideFlags: 0
@@ -6891,7 +6907,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4f215bc3727d14e82b53de9ed804ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _content: 0
+  itemData:
+    _crystallType: 0
+    _quantity: 0
 --- !u!61 &1483905611
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9243,7 +9261,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4f215bc3727d14e82b53de9ed804ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _content: 0
+  itemData:
+    _crystallType: 0
+    _quantity: 0
 --- !u!61 &2036846130
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9996,6 +10016,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 947093205, guid: 6ae6be4bb720cd346b632d89d569687f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354319598, guid: 6ae6be4bb720cd346b632d89d569687f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1692839763, guid: 6ae6be4bb720cd346b632d89d569687f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 11.400024
+      objectReference: {fileID: 0}
     - target: {fileID: 1885942043, guid: 6ae6be4bb720cd346b632d89d569687f, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -10004,6 +10036,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.039978027
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100292228702719655, guid: 6ae6be4bb720cd346b632d89d569687f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6100292229223884113, guid: 6ae6be4bb720cd346b632d89d569687f,
         type: 3}
