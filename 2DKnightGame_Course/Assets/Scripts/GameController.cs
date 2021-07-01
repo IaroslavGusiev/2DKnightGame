@@ -1,7 +1,8 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public enum GameState { Play, Pause}
 public delegate void InventoryUsedCallback(InventoryUIButton item);
@@ -25,25 +26,25 @@ public class GameController : MonoBehaviour
         }
 
     }
-    [SerializeField] private int _score;
+    //[SerializeField] private int _score;
     [SerializeField] private int _dragonHitScore = 10;
     [SerializeField] private int _dragonKillScore = 50;
     [SerializeField] private int _dragonKillExperience = 50;
-    private int Score
-    {
-        get
-        {
-            return _score;
-        }
-        set
-        {
-            if (value != _score)
-            {
-                _score = value;
-                HUD.Instance.SetScore(_score.ToString());
-            }
-        }
-    }
+    //private int Score
+    //{
+    //    get
+    //    {
+    //        return _score;
+    //    }
+    //    set
+    //    {
+    //        if (value != _score)
+    //        {
+    //            _score = value;
+    //            HUD.Instance.SetScore(_score.ToString());
+    //        }
+    //    }
+    //}
     [SerializeField] private List<InventoryItem> _inventory;
     public List<InventoryItem> Inventory 
     {
@@ -97,6 +98,9 @@ public class GameController : MonoBehaviour
 
     public event UpdateHeroParametersHandler OnUpdateHeroParameters;
 
+    public event Action<int> OnDragonWasHit;
+    public event Action<int> OnDragonWasKilled;
+
     private void Awake()
     {
         if (_instance == null)
@@ -119,7 +123,7 @@ public class GameController : MonoBehaviour
 
     public void StartNewLevel()
     {
-        HUD.Instance.SetScore(Score.ToString());
+        //HUD.Instance.SetScore(Score.ToString());
         if (OnUpdateHeroParameters != null)
         {
             OnUpdateHeroParameters(_hero);
@@ -131,7 +135,8 @@ public class GameController : MonoBehaviour
     {
         if (victim.GetType() == typeof(Dragon))
         {
-            Score += _dragonHitScore;
+            //Score += _dragonHitScore;
+            OnDragonWasHit?.Invoke(_dragonHitScore);
             AudioManager.PlaySound("Digital_Sword");
         }
         if (victim.GetType() == typeof(Knight))
@@ -144,7 +149,8 @@ public class GameController : MonoBehaviour
     {
         if (victim.GetType() == typeof(Dragon))
         {
-            Score += _dragonHitScore;
+            //Score += _dragonHitScore;
+            OnDragonWasKilled?.Invoke(_dragonKillScore);
             _hero.Experience += _dragonKillExperience;
             Destroy((victim as MonoBehaviour).gameObject);
         }
@@ -262,4 +268,20 @@ public class GameController : MonoBehaviour
             AudioManager.PlaySound("Warning_Loop2");
         }
     }
+
+    //void DragonWasHit()
+    //{
+    //    if (OnDragonWasHit != null)
+    //    {
+    //        OnDragonWasHit(_dragonHitScore);
+    //    }
+    //}
+
+    //void DragonWasKilled()
+    //{
+    //    if (OnDragonWasKilled != null)
+    //    {
+    //        OnDragonWasKilled(_dragonKillScore);
+    //    }
+    //}
 }
