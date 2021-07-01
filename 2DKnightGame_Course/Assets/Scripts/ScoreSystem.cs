@@ -5,8 +5,6 @@ using UnityEngine;
 public class ScoreSystem : MonoBehaviour
 {
     [SerializeField] private int _score;
-    [SerializeField] private int _dragonHitScore = 10;
-    [SerializeField] private int _dragonKillScore = 50;
     [SerializeField] private GameController _gameController;
 
     public int Score
@@ -25,16 +23,22 @@ public class ScoreSystem : MonoBehaviour
         }
     }
 
-    private void Awake()
+
+    private void OnEnable()
     {
-        _gameController.OnDragonWasHit += UpdatingScore;
-        _gameController.OnDragonWasKilled += UpdatingScore;
+
+        GameController.OnDragonWasHit += UpdatingScore;
+        GameController.OnDragonWasKilled += UpdatingScore;
     }
 
-    private void UpdatingScore(int score) 
+    private void OnDisable()
     {
-        _score += score;  
+        GameController.OnDragonWasHit -= UpdatingScore;
+        GameController.OnDragonWasKilled -= UpdatingScore;
     }
 
-
+   private void UpdatingScore(int score) 
+    {
+        Score += score;
+    }
 }

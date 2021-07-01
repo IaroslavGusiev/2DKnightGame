@@ -969,7 +969,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4f215bc3727d14e82b53de9ed804ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _content: 0
+  itemData:
+    _crystallType: 0
+    _quantity: 0
 --- !u!61 &157638336
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1859,7 +1861,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4f215bc3727d14e82b53de9ed804ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _content: 0
+  itemData:
+    _crystallType: 0
+    _quantity: 0
 --- !u!61 &352693844
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3699,6 +3703,75 @@ Transform:
   m_Father: {fileID: 1345701426}
   m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &589319427
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7563392706806955054, guid: f1bf61b732881ed4880baaea3ffb92ba,
+        type: 3}
+      propertyPath: m_Name
+      value: Score
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563392706806955056, guid: f1bf61b732881ed4880baaea3ffb92ba,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563392706806955056, guid: f1bf61b732881ed4880baaea3ffb92ba,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.9578001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563392706806955056, guid: f1bf61b732881ed4880baaea3ffb92ba,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.9693459
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563392706806955056, guid: f1bf61b732881ed4880baaea3ffb92ba,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.092457
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563392706806955056, guid: f1bf61b732881ed4880baaea3ffb92ba,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563392706806955056, guid: f1bf61b732881ed4880baaea3ffb92ba,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563392706806955056, guid: f1bf61b732881ed4880baaea3ffb92ba,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563392706806955056, guid: f1bf61b732881ed4880baaea3ffb92ba,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563392706806955056, guid: f1bf61b732881ed4880baaea3ffb92ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563392706806955056, guid: f1bf61b732881ed4880baaea3ffb92ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563392706806955056, guid: f1bf61b732881ed4880baaea3ffb92ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f1bf61b732881ed4880baaea3ffb92ba, type: 3}
 --- !u!1 &598442367
 GameObject:
   m_ObjectHideFlags: 0
@@ -4653,7 +4726,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4f215bc3727d14e82b53de9ed804ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _content: 0
+  itemData:
+    _crystallType: 0
+    _quantity: 0
 --- !u!61 &834575755
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8208,7 +8283,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4f215bc3727d14e82b53de9ed804ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _content: 0
+  itemData:
+    _crystallType: 0
+    _quantity: 0
 --- !u!61 &1483905611
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11362,7 +11439,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4f215bc3727d14e82b53de9ed804ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _content: 0
+  itemData:
+    _crystallType: 0
+    _quantity: 0
 --- !u!61 &2036846130
 BoxCollider2D:
   m_ObjectHideFlags: 0

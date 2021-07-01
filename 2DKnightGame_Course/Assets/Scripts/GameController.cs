@@ -26,25 +26,10 @@ public class GameController : MonoBehaviour
         }
 
     }
-    //[SerializeField] private int _score;
     [SerializeField] private int _dragonHitScore = 10;
     [SerializeField] private int _dragonKillScore = 50;
     [SerializeField] private int _dragonKillExperience = 50;
-    //private int Score
-    //{
-    //    get
-    //    {
-    //        return _score;
-    //    }
-    //    set
-    //    {
-    //        if (value != _score)
-    //        {
-    //            _score = value;
-    //            HUD.Instance.SetScore(_score.ToString());
-    //        }
-    //    }
-    //}
+    
     [SerializeField] private List<InventoryItem> _inventory;
     public List<InventoryItem> Inventory 
     {
@@ -98,8 +83,8 @@ public class GameController : MonoBehaviour
 
     public event UpdateHeroParametersHandler OnUpdateHeroParameters;
 
-    public event Action<int> OnDragonWasHit;
-    public event Action<int> OnDragonWasKilled;
+    public static Action<int> OnDragonWasHit;
+    public static Action<int> OnDragonWasKilled;
 
     private void Awake()
     {
@@ -135,7 +120,6 @@ public class GameController : MonoBehaviour
     {
         if (victim.GetType() == typeof(Dragon))
         {
-            //Score += _dragonHitScore;
             OnDragonWasHit?.Invoke(_dragonHitScore);
             AudioManager.PlaySound("Digital_Sword");
         }
@@ -149,7 +133,6 @@ public class GameController : MonoBehaviour
     {
         if (victim.GetType() == typeof(Dragon))
         {
-            //Score += _dragonHitScore;
             OnDragonWasKilled?.Invoke(_dragonKillScore);
             _hero.Experience += _dragonKillExperience;
             Destroy((victim as MonoBehaviour).gameObject);
@@ -268,20 +251,4 @@ public class GameController : MonoBehaviour
             AudioManager.PlaySound("Warning_Loop2");
         }
     }
-
-    //void DragonWasHit()
-    //{
-    //    if (OnDragonWasHit != null)
-    //    {
-    //        OnDragonWasHit(_dragonHitScore);
-    //    }
-    //}
-
-    //void DragonWasKilled()
-    //{
-    //    if (OnDragonWasKilled != null)
-    //    {
-    //        OnDragonWasKilled(_dragonKillScore);
-    //    }
-    //}
 }
