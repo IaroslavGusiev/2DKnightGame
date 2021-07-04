@@ -86,6 +86,8 @@ public class GameController : MonoBehaviour
     public static event Action<int> OnDragonWasHit;
     public static event Action<int> OnDragonWasKilled;
 
+    [SerializeField] private int _testConflictField;
+
     private void Awake()
     {
         if (_instance == null)
