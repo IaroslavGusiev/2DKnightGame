@@ -251,4 +251,9 @@ public class GameController : MonoBehaviour
             AudioManager.PlaySound("Warning_Loop2");
         }
     }
+
+    public void TestConflict() 
+    {
+        Debug.Log("Test");
+    }
 }
