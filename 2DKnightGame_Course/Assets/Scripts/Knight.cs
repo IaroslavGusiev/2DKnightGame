@@ -105,7 +105,7 @@ public class Knight : Creature
         Speed = parameters.Speed;
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
         GameController.Instance.OnUpdateHeroParameters -= HandleOnUpdateHeroParameters;
     }

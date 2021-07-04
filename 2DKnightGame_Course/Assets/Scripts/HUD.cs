@@ -171,7 +171,7 @@ public class HUD : MonoBehaviour
         UpdateCharacterValues(parameters.MaxHealth, parameters.Speed, parameters.Damage);
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
         GameController.Instance.OnUpdateHeroParameters -= HandleOnUpdateHeroParameters;
     }
