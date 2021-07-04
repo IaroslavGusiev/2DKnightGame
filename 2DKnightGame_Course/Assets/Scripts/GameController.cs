@@ -83,8 +83,8 @@ public class GameController : MonoBehaviour
 
     public event UpdateHeroParametersHandler OnUpdateHeroParameters;
 
-    public static Action<int> OnDragonWasHit;
-    public static Action<int> OnDragonWasKilled;
+    public static event Action<int> OnDragonWasHit;
+    public static event Action<int> OnDragonWasKilled;
 
     [SerializeField] private int _testConflictField;
 
@@ -252,5 +252,10 @@ public class GameController : MonoBehaviour
             OnUpdateHeroParameters(_hero);
             AudioManager.PlaySound("Warning_Loop2");
         }
+    }
+
+    public void TestConflict() 
+    {
+        Debug.Log("Test");
     }
 }
