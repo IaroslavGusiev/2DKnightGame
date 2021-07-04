@@ -999,7 +999,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4f215bc3727d14e82b53de9ed804ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _content: 0
+  itemData:
+    _crystallType: 0
+    _quantity: 0
 --- !u!61 &157638336
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2220,7 +2222,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4f215bc3727d14e82b53de9ed804ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _content: 0
+  itemData:
+    _crystallType: 0
+    _quantity: 0
 --- !u!61 &352693844
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5456,7 +5460,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4f215bc3727d14e82b53de9ed804ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _content: 0
+  itemData:
+    _crystallType: 0
+    _quantity: 0
 --- !u!61 &834575755
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8924,7 +8930,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4f215bc3727d14e82b53de9ed804ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _content: 0
+  itemData:
+    _crystallType: 0
+    _quantity: 0
 --- !u!61 &1483905611
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10922,6 +10930,75 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1863298376
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7563392706806955054, guid: f1bf61b732881ed4880baaea3ffb92ba,
+        type: 3}
+      propertyPath: m_Name
+      value: Score
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563392706806955056, guid: f1bf61b732881ed4880baaea3ffb92ba,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563392706806955056, guid: f1bf61b732881ed4880baaea3ffb92ba,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.9578001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563392706806955056, guid: f1bf61b732881ed4880baaea3ffb92ba,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.9693459
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563392706806955056, guid: f1bf61b732881ed4880baaea3ffb92ba,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.092457
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563392706806955056, guid: f1bf61b732881ed4880baaea3ffb92ba,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563392706806955056, guid: f1bf61b732881ed4880baaea3ffb92ba,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563392706806955056, guid: f1bf61b732881ed4880baaea3ffb92ba,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563392706806955056, guid: f1bf61b732881ed4880baaea3ffb92ba,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563392706806955056, guid: f1bf61b732881ed4880baaea3ffb92ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563392706806955056, guid: f1bf61b732881ed4880baaea3ffb92ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563392706806955056, guid: f1bf61b732881ed4880baaea3ffb92ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f1bf61b732881ed4880baaea3ffb92ba, type: 3}
 --- !u!1 &1870286551
 GameObject:
   m_ObjectHideFlags: 0
@@ -12375,7 +12452,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4f215bc3727d14e82b53de9ed804ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _content: 0
+  itemData:
+    _crystallType: 0
+    _quantity: 0
 --- !u!61 &2036846130
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13389,7 +13468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1371092317, guid: 6ae6be4bb720cd346b632d89d569687f, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1885942043, guid: 6ae6be4bb720cd346b632d89d569687f, type: 3}
       propertyPath: m_SizeDelta.y
