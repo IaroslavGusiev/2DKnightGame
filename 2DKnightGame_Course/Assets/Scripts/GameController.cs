@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
 
@@ -12,7 +11,22 @@ public class GameController : MonoBehaviour
 {
     private GameState _state;
     static private GameController _instance;
-    public static GameController Instance 
+    [SerializeField] private Audio _audioManager;
+
+    [SerializeField] private int _dragonHitScore = 10;
+    [SerializeField] private int _dragonKillScore = 50;
+    [SerializeField] private int _dragonKillExperience = 50;
+    [SerializeField] private int _testConflictField;
+
+    [SerializeField] private List<InventoryItem> _inventory;
+    private Knight _knight;
+    [SerializeField] private HeroParameters _hero;
+
+    public event UpdateHeroParametersHandler OnUpdateHeroParameters;
+    public static event Action<int> OnDragonWasHit;
+    public static event Action<int> OnDragonWasKilled;
+
+    public static GameController Instance
     {
         get
         {
@@ -26,67 +40,50 @@ public class GameController : MonoBehaviour
         }
 
     }
-    [SerializeField] private int _dragonHitScore = 10;
-    [SerializeField] private int _dragonKillScore = 50;
-    [SerializeField] private int _dragonKillExperience = 50;
-    
-    [SerializeField] private List<InventoryItem> _inventory;
-    public List<InventoryItem> Inventory 
+    public List<InventoryItem> Inventory
     {
-        get 
+        get
         {
             return _inventory;
         }
-        set 
+        set
         {
             _inventory = value;
         }
     }
-    private Knight _knight;
-    public Knight Knight 
+    public Knight Knight
     {
-        get 
+        get
         {
             return _knight;
         }
-        set 
+        set
         {
             _knight = value;
         }
     }
-
-    [SerializeField] private Audio _audioManager;
-    public Audio AudioManager 
+    public Audio AudioManager
     {
-        get 
+        get
         {
             return _audioManager;
         }
-        set 
+        set
         {
             _audioManager = value;
         }
     }
-
-    [SerializeField] private HeroParameters _hero;
-    public HeroParameters Hero 
+    public HeroParameters Hero
     {
-        get 
+        get
         {
             return _hero;
         }
-        set 
+        set
         {
             _hero = value;
         }
     }
-
-    public event UpdateHeroParametersHandler OnUpdateHeroParameters;
-
-    public static event Action<int> OnDragonWasHit;
-    public static event Action<int> OnDragonWasKilled;
-
-    [SerializeField] private int _testConflictField;
 
     private void Awake()
     {
@@ -110,7 +107,6 @@ public class GameController : MonoBehaviour
 
     public void StartNewLevel()
     {
-        //HUD.Instance.SetScore(Score.ToString());
         if (OnUpdateHeroParameters != null)
         {
             OnUpdateHeroParameters(_hero);
